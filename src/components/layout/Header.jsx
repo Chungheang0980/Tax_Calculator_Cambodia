@@ -18,13 +18,19 @@ const ROUTE_TITLES = {
   '/about':           'អំពីកម្មវិធី',
 }
 
-export default function Header({ onMenuClick, theme, onToggleTheme }) {
+export default function Header({ menuOpen, onMenuClick, theme, onToggleTheme }) {
   const { pathname } = useLocation()
   const title = ROUTE_TITLES[pathname] ?? 'ពន្ធដារកម្ពុជា'
 
   return (
     <header className="header">
-      <button className="header__menu-btn" onClick={onMenuClick} aria-label="បើក ឬបិទម៉ឺនុយ">
+      <button
+        className="header__menu-btn"
+        onClick={onMenuClick}
+        aria-label="បើក ឬបិទម៉ឺនុយ"
+        aria-expanded={menuOpen}
+        aria-controls="main-navigation"
+      >
         <span /><span /><span />
       </button>
 

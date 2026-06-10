@@ -136,7 +136,7 @@ const NAV_LINKS = [
 
 export default function Navbar({ open, onClose }) {
   return (
-    <aside className={`sidebar${open ? ' sidebar--open' : ''}`}>
+    <aside id="main-navigation" className={`sidebar${open ? ' sidebar--open' : ''}`}>
       {/* Brand */}
       <div className="sidebar__brand">
         <div className="sidebar__logo">

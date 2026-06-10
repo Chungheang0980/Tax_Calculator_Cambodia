@@ -23,11 +23,6 @@ export default function WithholdingTax() {
       <p className="page__eyebrow">ពន្ធកាត់ទុក</p>
       <h1 className="page__title">ម៉ាស៊ីនគណនាពន្ធកាត់ទុក</h1>
       <p className="page__subtitle">គណនាពន្ធដែលត្រូវកាត់ទុកតាមប្រភេទការទូទាត់ និងអត្រាពន្ធដែលបានកំណត់។</p>
-      <a className="page__doc-link" href="/docs/Tax_05_WithholdingTax.pdf" target="_blank" rel="noopener noreferrer">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        ឯកសារយោង: ឯកសារទី ០៥ – ពន្ធកាត់ទុក
-      </a>
-
       <form className="page__form" onSubmit={handleCalculate}>
         <div className="form-group">
           <label className="form-label" htmlFor="paymentType">ប្រភេទការទូទាត់</label>

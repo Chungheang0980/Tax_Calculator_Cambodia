@@ -14,10 +14,10 @@ import './TaxDetails.css'
  *   }
  */
 export default function TaxDetails({ data }) {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   return (
-    <section className="tax-details">
+    <section className={`tax-details${open ? ' tax-details--open' : ''}`}>
       <header className="tax-details__header">
         <button
           type="button"
@@ -26,6 +26,7 @@ export default function TaxDetails({ data }) {
           aria-expanded={open}
         >
           <span className="tax-details__eyebrow">ព័ត៌មានលម្អិតអំពីពន្ធ</span>
+          <span className="tax-details__toggle-label">{open ? 'លាក់ព័ត៌មាន' : 'បង្ហាញព័ត៌មាន'}</span>
           <span className="tax-details__chevron" aria-hidden>{open ? '−' : '+'}</span>
         </button>
       </header>

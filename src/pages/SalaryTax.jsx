@@ -40,11 +40,6 @@ export default function SalaryTax() {
       <p className="page__eyebrow">ពន្ធលើប្រាក់បៀវត្ស</p>
       <h1 className="page__title">ម៉ាស៊ីនគណនាពន្ធលើប្រាក់បៀវត្ស</h1>
       <p className="page__subtitle">គណនាពន្ធកាត់ទុកប្រចាំខែ សម្រាប់និវាសនជន និងអនិវាសនជន។</p>
-      <a className="page__doc-link" href="/docs/Tax_02_Salary.pdf" target="_blank" rel="noopener noreferrer">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        ឯកសារយោង: ឯកសារទី ០២ – ពន្ធលើប្រាក់បៀវត្ស
-      </a>
-
       <form className="page__form" onSubmit={handleCalculate}>
         <div className="form-group">
           <label className="form-label">ស្ថានភាពនិវាសនជន</label>

@@ -24,11 +24,6 @@ export default function VATCalculator() {
       <p className="page__eyebrow">អាករលើតម្លៃបន្ថែម</p>
       <h1 className="page__title">ម៉ាស៊ីនគណនាអាករលើតម្លៃបន្ថែម</h1>
       <p className="page__subtitle">គណនាអាករលើតម្លៃបន្ថែមអត្រា ១០% ពីចំនួនមុនអាករ ឬចំនួនដែលរួមអាកររួច។</p>
-      <a className="page__doc-link" href="/docs/VAT.pdf" target="_blank" rel="noopener noreferrer">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        ឯកសារយោង៖ ឯកសារអាករ - អាករលើតម្លៃបន្ថែម
-      </a>
-
       <form className="page__form" onSubmit={handleCalculate}>
         <div className="form-group">
           <label className="form-label">ប្រភេទចំនួនទឹកប្រាក់</label>

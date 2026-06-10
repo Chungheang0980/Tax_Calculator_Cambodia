@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar   from './components/layout/Navbar'
 import Header   from './components/layout/Header'
@@ -25,6 +25,17 @@ export default function App() {
   function closeSidebar() { setSidebarOpen(false) }
   function toggleSidebar() { setSidebarOpen(v => !v) }
 
+  useEffect(() => {
+    if (!sidebarOpen) return undefined
+
+    function handleKeyDown(event) {
+      if (event.key === 'Escape') closeSidebar()
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [sidebarOpen])
+
   return (
     <div className="app-wrapper">
       {/* Mobile overlay */}
@@ -37,7 +48,12 @@ export default function App() {
       <Navbar open={sidebarOpen} onClose={closeSidebar} />
 
       <div className="app-body">
-        <Header onMenuClick={toggleSidebar} theme={theme} onToggleTheme={toggleTheme} />
+        <Header
+          menuOpen={sidebarOpen}
+          onMenuClick={toggleSidebar}
+          theme={theme}
+          onToggleTheme={toggleTheme}
+        />
         <main className="main-content">
           <Routes>
             <Route path="/"                element={<Home />} />
